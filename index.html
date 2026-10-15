@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>دروس العقيدة والفقه</title>
+<style>
+:root{--bg:#0f1720;--s1:#16212d;--line:#26384a;--ink:#eef4fa;--tx2:#9fb2c4;--aq:#5aa9e6;--fq:#4fc08d;--cm:#e0a84a}
+@media (prefers-color-scheme:light){:root{--bg:#f4f7fa;--s1:#fff;--line:#dbe4ec;--ink:#13202c;--tx2:#5b6b7a;--aq:#1f6fb2;--fq:#1d8a5a;--cm:#a8701a}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",Tahoma,sans-serif;padding:28px 18px 60px}
+.w{max-width:960px;margin:0 auto}h1{font-size:clamp(30px,6vw,48px);margin:0 0 6px}p.s{color:var(--tx2);margin:0 0 28px}
+h2{font-size:22px;margin:30px 0 12px;display:flex;align-items:center;gap:10px}h2 i{width:12px;height:12px;border-radius:4px;display:inline-block}
+.g{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+a{display:flex;align-items:center;gap:12px;padding:16px;border-radius:16px;background:var(--s1);border:1px solid var(--line);color:var(--ink);text-decoration:none;font-weight:700;font-size:17px;transition:.15s}
+a:hover{transform:translateY(-3px)}a b{flex:none;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;color:#fff;font-size:14px}
+</style></head>
+<body><div class="w">
+<h1>دروس العقيدة والفقه</h1><p class="s">صفحات تفاعلية للعرض والمراجعة — اختر الدرس لفتحه</p>
+<div id="list"></div></div>
+<script>
+const G=[
+ {t:"العقيدة",c:"var(--aq)",f:["الإيمان وأركانه","الإيمان بالملائكة","الإيمان بالكتب","الإيمان بالرسل","الإيمان باليوم الآخر","أشراط الساعة","الإيمان بالقدر","الصحابة وآل البيت"]},
+ {t:"الفقه",c:"var(--fq)",f:["فقه الصيام","فقه الحج","غزوة بدر وفتح مكة","النكاح","فقه المعاملات","فقه الأطعمة","فقه الجريمة والعقوبة"]},
+ {t:"المسابقات",c:"var(--cm)",f:["مسابقة-مراجعة-مقرر-العقيدة","مسابقة-مراجعة-مقرر-الفقه-والسلوك","مجلس-الفتوى","مجلس-اليقين"]}];
+document.getElementById('list').innerHTML=G.map(g=>`<h2><i style="background:${g.c}"></i>${g.t}</h2><div class="g">${g.f.map((n,i)=>`<a href="./${encodeURIComponent(n)}.html"><b style="background:${g.c}">${i+1}</b>${n.replace(/-/g,' ')}</a>`).join('')}</div>`).join('');
+</script>
+</body></html>
