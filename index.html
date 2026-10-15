@@ -21,6 +21,6 @@ const G=[
  {t:"العقيدة",c:"var(--aq)",f:["الإيمان وأركانه","الإيمان بالملائكة","الإيمان بالكتب","الإيمان بالرسل","الإيمان باليوم الآخر","أشراط الساعة","الإيمان بالقدر","الصحابة وآل البيت"]},
  {t:"الفقه",c:"var(--fq)",f:["فقه الصيام","فقه الحج","غزوة بدر وفتح مكة","النكاح","فقه المعاملات","فقه الأطعمة","فقه الجريمة والعقوبة"]},
  {t:"المسابقات",c:"var(--cm)",f:["مسابقة-مراجعة-مقرر-العقيدة","مسابقة-مراجعة-مقرر-الفقه-والسلوك","مجلس-الفتوى","مجلس-اليقين"]}];
-document.getElementById('list').innerHTML=G.map(g=>`<h2><i style="background:${g.c}"></i>${g.t}</h2><div class="g">${g.f.map((n,i)=>`<a href="./${encodeURIComponent(n)}.html"><b style="background:${g.c}">${i+1}</b>${n.replace(/-/g,' ')}</a>`).join('')}</div>`).join('');
+document.getElementById('list').innerHTML=G.map(g=>`<h2><i style="background:${g.c}"></i>${g.t}</h2><div class="g">${g.f.map((n,i)=>`<a href="./view.html?f=${encodeURIComponent(n)}"><b style="background:${g.c}">${i+1}</b>${n.replace(/-/g,' ')}</a>`).join('')}</div>`).join('');
 </script>
 </body></html>

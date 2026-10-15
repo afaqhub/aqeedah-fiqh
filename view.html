@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>الدرس</title>
+<style>
+html,body{margin:0;height:100%;background:#0f1720;font-family:"Segoe UI",Tahoma,sans-serif}
+.bar{position:fixed;top:0;right:0;left:0;height:48px;display:flex;align-items:center;gap:12px;padding:0 12px;background:#0f1720;color:#eef4fa;z-index:2;border-bottom:1px solid #26384a}
+.bar a{color:#0f1720;background:#5aa9e6;text-decoration:none;font-weight:800;padding:8px 14px;border-radius:10px;font-size:15px}
+.bar span{font-weight:700;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+iframe{position:fixed;top:48px;right:0;left:0;bottom:0;width:100%;height:calc(100% - 48px);border:0;background:#fff}
+</style></head>
+<body>
+<div class="bar"><a href="./index.html">→ كل الدروس</a><span id="t"></span></div>
+<iframe id="f" allow="fullscreen; autoplay"></iframe>
+<script>
+const n=new URLSearchParams(location.search).get('f');
+if(n){document.getElementById('t').textContent=n.replace(/-/g,' ');document.title=n;document.getElementById('f').src='./'+encodeURIComponent(n)+'.html';}
+else location.href='./index.html';
+</script>
+</body></html>
