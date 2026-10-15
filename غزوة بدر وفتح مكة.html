@@ -213,7 +213,7 @@ html[data-theme="day"] .map{background:rgba(255,255,255,.6)}
     <div class="card"><span class="ic">🇸🇦</span><b>حماية الوطن:</b> الحفاظ على أمن بلاد المسلمين واجب ديني وضرورة شرعية.</div>
     <div class="card"><span class="ic">🤫</span><b>الكتمان:</b> حفظ الأسرار العسكرية واجب، وإفشاؤها خيانة.</div>
   </div>
-  <div class="pause"><span class="ptag">🙋 نقاش</span><div class="pq naskh">لماذا يُشترط إذن ولي الأمر في الجهاد؟</div><div class="row"><button class="btn gold rv">💡 اكشف</button></div><div class="pa">لجمع الكلمة، ومنع الفوضى وسفك الدماء، ومعرفة المصلحة والقدرة، ولأن الراية التي بلا إمام راية عُمِّيّة تفرّق المسلمين.</div></div><div class="row"><button class="btn gold" onclick="go(2)">⚔️ إلى الجولة الأولى</button></div>
+  <div class="pause"><span class="ptag">💬 نقاش</span><div class="pq naskh">لماذا يُشترط إذن ولي الأمر في الجهاد؟</div><div class="row"><button class="btn gold rv">💡 اكشف</button></div><div class="pa">لجمع الكلمة، ومنع الفوضى وسفك الدماء، ومعرفة المصلحة والقدرة، ولأن الراية التي بلا إمام راية عُمِّيّة تفرّق المسلمين.</div></div><div class="row"><button class="btn gold" onclick="go(2)">⚔️ إلى الجولة الأولى</button></div>
 </section>
 
 <section id="s2"><h2>⚔️ الجولة الأولى: صح أم خطأ؟</h2><div class="teams" data-g></div><div class="stage" id="g1"></div></section>
@@ -275,7 +275,7 @@ const FATH=[
 {c:"🔥 النيران",w:"ليلة الفتح",h:"عشرة آلاف نار على مشارف مكة",p:"أمر النبي ﷺ أن يوقد كل جندي نارًا، فرأت قريش نيرانًا تملأ الأفق، فأدركت أنه لا طاقة لها بهذا الجيش.",x:""},
 {c:"🕋 الدخول",w:"يوم الفتح",h:"دخولٌ بتواضع… لا بتكبّر",p:"دخل النبي ﷺ مكة متواضعًا لربه، وطاف بالبيت، وحطّم الأصنام حول الكعبة وهو يتلو:",x:`<div class="quote naskh">﴿وَقُلْ جَاءَ الْحَقُّ وَزَهَقَ الْبَاطِلُ إِنَّ الْبَاطِلَ كَانَ زَهُوقًا﴾ [الإسراء: 81]</div><div class="tip">🤲 وصلى ﷺ يوم الفتح <b>صلاة الضحى</b> في بيت أم هانئ.</div>`},
 {c:"🤍 العفو",w:"لحظة القوة",h:"عفوٌ عند المقدرة",p:"وقف أهل مكة الذين آذوه وأخرجوه ينتظرون حكمه… فعفا عنهم ﷺ، فدخل الناس في دين الله أفواجًا.",x:`<div class="quote naskh">﴿إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ * وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا﴾ [النصر: 1-2]</div>`},
-{c:"📜 الدروس",w:"خذوا العبرة",h:"دروس الفتح",p:"",x:`<div class="lessons"><div class="card">🤝 <b>الوفاء بالعهود</b>، ونقضها عاقبته وخيمة.</div><div class="card">🤫 <b>الكتمان</b> سلاح القائد.</div><div class="card">🙇 <b>التواضع عند النصر</b> وشكر الله.</div><div class="card">🤍 <b>العفو عند المقدرة</b> يفتح القلوب.</div></div>`}];
+{c:"📜 الدروس",w:"خذوا العبرة",h:"دروس الفتح",p:"",x:`<div class="lessons"><div class="card">🤝 <b>الوفاء بالعهود</b>، ونقضها عاقبته وخيمة.</div><div class="card">🤫 <b>الكتمان</b> سلاح القائد.</div><div class="card"> <b>التواضع عند النصر</b> وشكر الله.</div><div class="card">🤍 <b>العفو عند المقدرة</b> يفتح القلوب.</div></div>`}];
 const SC={b:{d:BADR,i:0},f:{d:FATH,i:0}};
 ['b','f'].forEach(k=>{SC[k].d.forEach((s,i)=>{const b=document.createElement('button');b.textContent=s.c;b.onclick=()=>showS(k,i);$(k+'Chap').appendChild(b);});
   $(k+'Prev').onclick=()=>showS(k,SC[k].i-1);$(k+'Next').onclick=()=>{if(SC[k].i===SC[k].d.length-1)go(k==='b'?4:6);else showS(k,SC[k].i+1);};});
