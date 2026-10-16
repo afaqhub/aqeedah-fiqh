@@ -1,10 +1,12 @@
 <!DOCTYPE html>
+<!-- © جهاد بن جمال | فكرة وإعداد وتصميم: جهاد بن جمال | رمز البصمة: JBJ-6DCA6D529A | جميع الحقوق محفوظة -->
 <html lang="ar" dir="rtl" data-theme="night">
 <head>
+<meta name="author" content="جهاد بن جمال"><meta name="copyright" content="© جهاد بن جمال — جميع الحقوق محفوظة"><meta name="generator" content="JBJ-6DCA6D529A">
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>فقه الجريمة والعقوبة</title>
+<title>فقه الجريمة والعقوبة⁠‌‌​‌‌​​​‌​‌​‌‌​​‌‌​‌‌​​‌‌​​​​‌‌‌‌‌​‌‌​​​‌​‌​​‌‌‌‌‌​‌‌​​​‌​‌​‌‌‌‌​​‌​​​​​‌‌​‌‌​​​‌​‌​‌​​​‌‌​‌‌​​‌‌​​​​‌‌​​​‌​​​​​‌‌​‌‌​​​‌​‌​‌‌​​‌‌​‌‌​​‌‌​​​​‌​‌‌‌​‌‌​​​‌​‌​​‌‌‌‌‌​‌‌​​‌‌​​​​‌​​⁠</title>
 <style>
-:root{--bg:#0a1f1c;--bg2:#12403a;--ink:#f1ece2;--gold:#d9a441;--gold2:#f0cd86;--ok:#4fb58d;--no:#d1735a;--card:rgba(255,255,255,.06);--line:rgba(240,205,134,.25)}
+:root{--a:"جهاد بن جمال";--bg:#0a1f1c;--bg2:#12403a;--ink:#f1ece2;--gold:#d9a441;--gold2:#f0cd86;--ok:#4fb58d;--no:#d1735a;--card:rgba(255,255,255,.06);--line:rgba(240,205,134,.25)}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(1000px 600px at 50% -10%,var(--bg2),transparent 60%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;min-height:100vh}
 button{font-family:inherit;cursor:pointer;border:none;color:inherit;background:none}
 .naskh{font-family:"Noto Naskh Arabic","Traditional Arabic","Amiri",serif}
@@ -277,7 +279,7 @@ function knock(at){if(!on)return;const c=ac(),t=c.currentTime+at,o=c.createOscil
 $('snd').onclick=()=>{on=!on;$('snd').style.opacity=on?1:.4;};
 
 /* teams (shared across rounds) */
-const T=[{"n": "حُرّاس الأمن", "s": 0}, {"n": "حُرّاس العدل", "s": 0}, {"n": "حُرّاس الحق", "s": 0}];let turn=0;
+const T=[{n:"الإبداع",s:0},{n:"التميز",s:0},{n:"الهمة",s:0}];let turn=0;
 function renderTeams(bi){document.querySelectorAll('[data-g]').forEach(box=>{box.innerHTML='';
   T.forEach((t,i)=>{const d=document.createElement('div');d.className='team'+(i===turn?' on':'')+(i===bi?' bump':'');
     d.innerHTML=`<input value="${t.n}"><div class="sc">${t.s}</div><div class="adj"><button>+</button><button>−</button></div>`;
@@ -285,7 +287,7 @@ function renderTeams(bi){document.querySelectorAll('[data-g]').forEach(box=>{box
     const[p,m]=d.querySelectorAll('.adj button');p.onclick=e=>{e.stopPropagation();t.s+=5;renderTeams(i);};m.onclick=e=>{e.stopPropagation();t.s-=5;renderTeams(i);};
     d.onclick=e=>{if(e.target.tagName==='DIV'||e.target.className==='sc'){turn=i;renderTeams();}};box.appendChild(d);});
   const ctl=document.createElement('div');ctl.className='team';ctl.innerHTML=`<div style="font-size:13px;opacity:.7">عدد الفرق</div><div class="adj" style="margin-top:8px"><button>+</button><button>−</button></div>`;
-  const[a,r]=ctl.querySelectorAll('button');a.onclick=()=>{if(T.length<4){T.push({n:"الفريق "+(T.length+1),s:0});renderTeams();}};r.onclick=()=>{if(T.length>2){T.pop();turn%=T.length;renderTeams();}};box.appendChild(ctl);});}
+  const[a,r]=ctl.querySelectorAll('button');a.onclick=()=>{if(T.length<4){T.push({n:["الإبداع","التميز","الهمة","السمو"][T.length]||"الفريق "+(T.length+1),s:0});renderTeams();}};r.onclick=()=>{if(T.length>2){T.pop();turn%=T.length;renderTeams();}};box.appendChild(ctl);});}
 function next(){turn=(turn+1)%T.length;}
 const PR=["أحسنت يا بطل!","قاضٍ عادل!","إجابة مسدّدة!","ما شاء الله!","زادك الله علمًا!"];
 
@@ -602,5 +604,14 @@ secs.forEach((sec,i)=>{if(!i)return;
 $a('.card.naskh').forEach(c=>{if((c.getAttribute('style')||'').includes('center'))c.classList.add('ayah-panel');});
 })();
 </script>
+<style>.__mk{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.__pm{display:none}@media print{.__pm{display:block!important;position:fixed;bottom:3mm;left:4mm;font-size:5pt;color:#c8c8c8;font-family:Tahoma,sans-serif;direction:rtl}}</style><span class="__mk" aria-hidden="true" data-k="JBJ-6DCA6D529A">© جهاد بن جمال⁠‌‌​‌‌​​​‌​‌​‌‌​​‌‌​‌‌​​‌‌​​​​‌‌‌‌‌​‌‌​​​‌​‌​​‌‌‌‌‌​‌‌​​​‌​‌​‌‌‌‌​​‌​​​​​‌‌​‌‌​​​‌​‌​‌​​​‌‌​‌‌​​‌‌​​​​‌‌​​​‌​​​​​‌‌​‌‌​​​‌​‌​‌‌​​‌‌​‌‌​​‌‌​​​​‌​‌‌‌​‌‌​​​‌​‌​​‌‌‌‌‌​‌‌​​‌‌​​​​‌​​⁠</span><div class="__pm" aria-hidden="true">جهاد بن جمال · JBJ-6DCA6D529A</div><script>/* © جهاد بن جمال — فكرة وإعداد وتصميم: جهاد بن جمال — جميع الحقوق محفوظة */(function(){var A="جهاد بن جمال",K="JBJ-6DCA6D529A",c=0,t=0;
+try{console.log("%c© "+A+" — "+K,"color:#888;font-size:11px")}catch(e){}
+function show(){if(document.getElementById('__own'))return;var d=document.createElement('div');d.id='__own';
+d.setAttribute('style','position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.72);display:flex;align-items:center;justify-content:center;padding:20px;font-family:Tahoma,sans-serif');
+d.innerHTML='<div style="background:#fff;color:#111;border-radius:16px;padding:26px 30px;max-width:420px;text-align:center;direction:rtl;box-shadow:0 20px 50px rgba(0,0,0,.4)"><div style="font-size:13px;color:#777;letter-spacing:1px">بصمة الملكية الفكرية</div><div style="font-size:24px;font-weight:900;margin:10px 0">'+A+'</div><div style="font-size:15px;line-height:1.9">فكرة وإعداد وتصميم هذه المنصة</div><div style="margin:12px 0;font-family:monospace;font-size:15px;background:#f2f2f2;border-radius:8px;padding:8px">'+K+'</div><button style="padding:8px 20px;border-radius:10px;border:0;background:#111;color:#fff;font-weight:700;cursor:pointer">إغلاق</button></div>';
+d.onclick=function(e){if(e.target===d||e.target.tagName==='BUTTON')d.remove();};document.body.appendChild(d);}
+document.addEventListener('click',function(e){var h=e.target.closest&&e.target.closest('h1');if(!h)return;var now=Date.now();if(now-t>4000)c=0;t=now;c++;if(c>=7){c=0;show();}},true);
+document.addEventListener('keydown',function(e){if(e.ctrlKey&&e.altKey&&(e.key==='j'||e.key==='J'||e.code==='KeyJ'))show();});})();</script>
 </body>
 </html>
